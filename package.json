@@ -1,0 +1,15 @@
+{
+  "name": "container-ecs-class",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com-second:yogae/container-ecs-class.git",
+  "author": "kim jihyun",
+  "license": "MIT",
+  "scripts": {
+    "start": "node bin/www.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1"
+  }
+}
