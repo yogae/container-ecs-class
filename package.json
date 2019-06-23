@@ -6,7 +6,7 @@
   "author": "kim jihyun",
   "license": "MIT",
   "scripts": {
-    "start": "node bin/www.js"
+    "start": "node bin/server.js"
   },
   "dependencies": {
     "dotenv": "^8.0.0",
