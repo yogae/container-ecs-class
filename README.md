@@ -4,6 +4,9 @@
 
 ![image1](./images/image1.jpg)
 
+## directory 구조
+
+
 ## 목차
 
 1. [git 설명](./etc/git.md)
