@@ -9,4 +9,6 @@
 ``` bash
 
 git clone https://github.com/yogae/container-ecs-class.git
+
+git pull
 ```
