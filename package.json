@@ -6,7 +6,10 @@
   "author": "kim jihyun",
   "license": "MIT",
   "scripts": {
-    "start": "node bin/server.js"
+    "start": "node bin/www.js",
+    "docker-build": "docker build --tag=container-ecs .",
+    "docker-run": "docker run -d --name container-ecs-test -p 3000:3000 container-ecs:latest",
+    "docker-stop": "docker stop container-ecs-test"
   },
   "dependencies": {
     "dotenv": "^8.0.0",

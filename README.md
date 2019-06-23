@@ -17,6 +17,8 @@
 
 4. [visual code](./etc/visualCode.md)
 
+5. [REST API](./etc/restApi.md)
+
 ## 구성
 
 - docker container 구성

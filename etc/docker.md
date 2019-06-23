@@ -8,24 +8,53 @@ Docker는 반가상화보다 좀더 경량화된 방식입니다. 그림 1-6와 
 
 ## Docker 설치
 
-- [on Window](https://docs.docker.com/docker-for-windows/install/)
+Windows7, Windows 8, Windows 10 Home 버전 사용자는 "Docker ToolBox 설치"를 봐주시면 되고 윈도우10 프로 이상 사용자는 "Docker Destop 설치"를 참고해주세요.
+
+- [Docker Destop 설치](https://docs.docker.com/docker-for-windows/install/)
+- [Docker ToolBox 설치](https://docs.docker.com/docker-for-windows/install/)
+    - [Docker ToolBox install 방법](https://docs.docker.com/toolbox/toolbox_install_windows/)
 - [on Mac](https://docs.docker.com/docker-for-mac/install/)
 
 ## Docker 간단 사용법
 
-```
-docker build
+    "docker-build": "docker build --tag=container-ecs .",
+    "docker-run": "docker run -d --name container-ecs-test -p 3000:3000 container-ecs:latest",
+    "docker-stop": "docker stop container-ecs-test"
 
-docker images
+```bash
+# docker image 생성
+docker build --tag=container-ecs .
 
-docker ps
+# docker container 실행
+docker run -d --name container-ecs-test -p 3000:3000
+## -d 백그라운드에서 실행 
+## --name 실행할 container 이름 지정
+## -p port 지정
 
-docker run
+# docker container 종료
+docker stop container-ecs-test
 
+# docker container 삭제
+docker rm container-ecs-test
+
+# container에서 bash 실행
 docker run -i -t --name hello ubuntu /bin/bash
 
-docker attach hello
+# docker image 삭제(docker container 삭제 이후에 image 삭제를 실행한다.)
+docker rmi container-ecs
 
+# local에 저장된 image list 확인
+docker images
+
+# 실행중인 container 확인
+docker ps
+
+# 컨테이너에 접속
+docker attach hello
+## Bash Shell에서 exit 또는 Ctrl+D를 입력하면 컨테이너가 정지됩니다. 
+## 여기서는 Ctrl+P, Ctrl+Q를 차례대로 입력하여 컨테이너를 정지하지 않고, 컨테이너에서 빠져나옵니다.
+
+# container에 명령 실행
 docker exec hello echo "Hello World"
 ```
 

@@ -31,11 +31,9 @@ node -v
 ## node 사용법
 
 ```bash
-
 ## node version 확인
 node -v 
 
-## javacript code 실행
+## javacript file 실행
 node <file path>
-
 ```
