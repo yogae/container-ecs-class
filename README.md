@@ -13,7 +13,9 @@
 
 2. [docker 설명](./etc/docker.md)
 
-3. [visual code](./etc/visualCode.md)
+3. [node](./etc/node.md)
+
+4. [visual code](./etc/visualCode.md)
 
 ## 구성
 
