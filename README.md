@@ -6,7 +6,9 @@
 
 ## 목차
 
-1. [docker 설명](./etc/docker.md)
+1. [git 설명](./etc/git.md)
+
+2. [docker 설명](./etc/docker.md)
 
 ## 구성
 
