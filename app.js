@@ -1,37 +1,30 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+const users = require('./routes/users');
 
-const obj = {};
+//body-parser를 사용해 application/x-www-form-urlencoded 파싱
+app.use(bodyParser.urlencoded({extended: false}));
+//body-parser를 사용해 application/json 파싱
+app.use(bodyParser.json());
 
-// app.post('/user', function (req, res) {
-    
-//     res.status(200).json();
-// });
-
-// app.put('/user', function (req, res) {
-//     res.status(200).json();
-// });
-
-app.get('/user', function (req, res) {
-    console.log(req);
-    console.log(req.headers);
-    res.status(200).json();
+app.get('/health', function (req, res) {
+    res.status(200).end();
 });
 
-app.get('/user/:id', function (req, res) {
-    console.log(req);
-    console.log(req.params);
-    res.status(200).json();
+app.use('/users', users);
+
+// not found 404 error
+app.use((req, res, next) => {
+    const err = new Error('Not Found');
+    err.status = 404;
+    next(err);
 });
 
-app.get('/users', function (req, res) {
-    console.log(req);
-    console.log(req.query);
-    res.status(200).json();
+// error handler
+app.use((err, req, res, next) => {
+    const status = err.status || 500;
+    return res.status(status).json(err.message);
 });
-
-// app.delete('/user', function (req, res) {
-//     res.status(200).json();
-// });
 
 module.exports = app;

@@ -3,3 +3,4 @@ etc/*
 .gitignore
 Dockerfile
 .git/*
+images/*
