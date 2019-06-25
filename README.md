@@ -15,7 +15,7 @@
 - [node](./etc/node.md)
 - [visual code](./etc/visualCode.md)
 
-### 개념
+### 개념 설명
 
 - [http 상태 code](https://ko.wikipedia.org/wiki/HTTP_%EC%83%81%ED%83%9C_%EC%BD%94%EB%93%9C)
 - [http 헤더 정리](https://www.zerocho.com/category/HTTP/post/5b3ba2d0b3dabd001b53b9db)
